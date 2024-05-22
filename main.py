@@ -14,6 +14,7 @@ def main():
                                        read_from_stub=True,
                                        stub_path='stubs/track_stubs.pkl')
     
+      # Assign Player Teams
     team_assigner = TeamAssigner()
     team_assigner.assign_team_color(video_frames[0], 
                                     tracks['players'][0])
@@ -25,7 +26,6 @@ def main():
                                                  player_id)
             tracks['players'][frame_num][player_id]['team'] = team 
             tracks['players'][frame_num][player_id]['team_color'] = team_assigner.team_colors[team]
-    
     
     # Draw output
     ## Draw object tracks
